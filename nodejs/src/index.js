@@ -97,6 +97,7 @@ const Cli = (inputOptions = CLIOPTIONS, inputArgs = process.argv) => {
 
 module.exports = exports = {
 	render: Render,
-	say: Say,
+    say: Say,
+    fonts: () => ['3d', 'block', 'chrome', 'console', 'grid', 'huge', 'pallet', 'shade', 'simple', 'simple3d', 'simpleBlock', 'slick', 'tiny'],
 	Cli,
 };
