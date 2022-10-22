@@ -13,17 +13,17 @@
  *
  **************************************************************************************************************************************************************/
 
-'use strict';
+"use strict";
 
-const { DisplayVersion } = require('./DisplayVersion.js');
-const { DisplayHelp } = require('./DisplayHelp.js');
-const { CLIOPTIONS } = require('./constants.js');
-const { Debugging } = require('./Debugging.js');
-const { ParseArgs } = require('./ParseArgs.js');
-const { Render } = require('./Render.js');
-const { Color } = require('./Color.js');
-const { Log } = require('./Log.js');
-const { Say } = require('./Say.js');
+const { DisplayVersion } = require("./src/DisplayVersion.js");
+const { DisplayHelp } = require("./src/DisplayHelp.js");
+const { CLIOPTIONS } = require("./src/constants.js");
+const { Debugging } = require("./src/Debugging.js");
+const { ParseArgs } = require("./src/ParseArgs.js");
+const { Render } = require("./src/Render.js");
+const { Color } = require("./src/Color.js");
+const { Log } = require("./src/Log.js");
+const { Say } = require("./src/Say.js");
 
 /**
  * Run cli commands
@@ -39,15 +39,15 @@ const Cli = (inputOptions = CLIOPTIONS, inputArgs = process.argv) => {
 			`  CFonts.say("${args.text}", {\n` +
 			`    font: "${args.font}",\n` +
 			`    align: "${args.align}",\n` +
-			`    colors: ${args.colors ? JSON.stringify(args.colors.split(',')) : []},\n` +
+			`    colors: ${args.colors ? JSON.stringify(args.colors.split(",")) : []},\n` +
 			`    background: "${args.background}",\n` +
-			`    letterSpacing: ${args['letter-spacing']},\n` +
-			`    lineHeight: ${args['line-height']},\n` +
+			`    letterSpacing: ${args["letter-spacing"]},\n` +
+			`    lineHeight: ${args["line-height"]},\n` +
 			`    space: ${!args.spaceless},\n` +
-			`    maxLength: ${args['max-length']},\n` +
+			`    maxLength: ${args["max-length"]},\n` +
 			`    gradient: ${args.gradient},\n` +
-			`    independentGradient: ${args['independent-gradient']},\n` +
-			`    transitionGradient: ${args['transition-gradient']},\n` +
+			`    independentGradient: ${args["independent-gradient"]},\n` +
+			`    transitionGradient: ${args["transition-gradient"]},\n` +
 			`    env: ${args.env},\n` +
 			`  }, ${args.debug}, ${args.debugLevel} );`,
 		3,
@@ -66,11 +66,8 @@ const Cli = (inputOptions = CLIOPTIONS, inputArgs = process.argv) => {
 	}
 
 	if (!args.text) {
-		const { open: green_open, close: green_close } = Color('green');
-		Log.error(
-			`Please provide text to convert with ${green_open}cfonts "Text"${green_close}\n` +
-				`Run ${green_open}cfonts --help${green_close} for more infos`
-		);
+		const { open: green_open, close: green_close } = Color("green");
+		Log.error(`Please provide text to convert with ${green_open}cfonts "Text"${green_close}\n` + `Run ${green_open}cfonts --help${green_close} for more infos`);
 		return;
 	}
 
@@ -79,15 +76,15 @@ const Cli = (inputOptions = CLIOPTIONS, inputArgs = process.argv) => {
 		{
 			font: args.font,
 			align: args.align,
-			colors: args.colors ? args.colors.split(',') : [],
+			colors: args.colors ? args.colors.split(",") : [],
 			background: args.background,
-			letterSpacing: args['letter-spacing'],
-			lineHeight: args['line-height'],
+			letterSpacing: args["letter-spacing"],
+			lineHeight: args["line-height"],
 			space: !args.spaceless,
-			maxLength: args['max-length'],
+			maxLength: args["max-length"],
 			gradient: args.gradient,
-			independentGradient: args['independent-gradient'],
-			transitionGradient: args['transition-gradient'],
+			independentGradient: args["independent-gradient"],
+			transitionGradient: args["transition-gradient"],
 			env: args.env,
 		},
 		args.debug,
@@ -97,7 +94,7 @@ const Cli = (inputOptions = CLIOPTIONS, inputArgs = process.argv) => {
 
 module.exports = exports = {
 	render: Render,
-    say: Say,
-    fonts: () => ['3d', 'block', 'chrome', 'console', 'grid', 'huge', 'pallet', 'shade', 'simple', 'simple3d', 'simpleBlock', 'slick', 'tiny'],
+	say: Say,
+	fonts: () => ["3d", "block", "chrome", "console", "grid", "huge", "pallet", "shade", "simple", "simple3d", "simpleBlock", "slick", "tiny"],
 	Cli,
 };
