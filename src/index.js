@@ -15,15 +15,15 @@
 
 "use strict";
 
-const { DisplayVersion } = require("./src/DisplayVersion.js");
-const { DisplayHelp } = require("./src/DisplayHelp.js");
-const { CLIOPTIONS } = require("./src/constants.js");
-const { Debugging } = require("./src/Debugging.js");
-const { ParseArgs } = require("./src/ParseArgs.js");
-const { Render } = require("./src/Render.js");
-const { Color } = require("./src/Color.js");
-const { Log } = require("./src/Log.js");
-const { Say } = require("./src/Say.js");
+const { DisplayVersion } = require("./DisplayVersion.js");
+const { DisplayHelp } = require("./DisplayHelp.js");
+const { CLIOPTIONS } = require("./constants.js");
+const { Debugging } = require("./Debugging.js");
+const { ParseArgs } = require("./ParseArgs.js");
+const { Render } = require("./Render.js");
+const { Color } = require("./Color.js");
+const { Log } = require("./Log.js");
+const { Say } = require("./Say.js");
 
 /**
  * Run cli commands

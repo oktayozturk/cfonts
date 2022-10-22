@@ -1,19 +1,16 @@
 {
-	"name": "cfonts",
-	"description": "Sexy ANSI fonts for the console",
-	"version": "3.1.1",
-	"homepage": "https://github.com/dominikwilkowski/cfonts",
+	"name": "synapsys-fonts",
+	"description": "ANSI fonts for nodejs, fork from cfonts",
+	"version": "1.0.4",
+	"homepage": "https://github.com/ozturkok/cfonts",
 	"author": {
-		"name": "Dominik Wilkowski",
-		"email": "Hi@Dominik-Wilkowski.com",
-		"url": "http://dominik-wilkowski.com/"
+		"name": "Oktay Öztürk",
+		"email": "oktay@synapsys.one",
+		"url": "https://synapsys.one/"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/dominikwilkowski/cfonts.git"
-	},
-	"bugs": {
-		"url": "https://github.com/dominikwilkowski/cfonts/issues"
+		"url": "git://github.com/ozturkok/cfonts.git"
 	},
 	"engines": {
 		"node": ">=10"
@@ -48,7 +45,6 @@
 		"prettier": "^2.6.2",
 		"typescript": "^4.6.3"
 	},
-	"peerDependencies": {},
 	"dependencies": {
 		"supports-color": "^8",
 		"window-size": "^1.1.1"
